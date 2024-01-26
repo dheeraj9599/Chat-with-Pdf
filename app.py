@@ -18,7 +18,7 @@ from PyPDF2 import PdfReader # For reading a PDF Document
 from langchain.text_splitter import CharacterTextSplitter # for splitting words into characters
 
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = st.secrets["API_KEY"]
 
 
 llm = OpenAI(openai_api_key = OPENAI_API_KEY)
@@ -39,7 +39,7 @@ def Model():
 
   
   
-  # We need to split the text using Character Text Split such that it should not increase token size
+  # splitting the text using Character Text Split to minimize token size
   #  text_splitter = CharacterTextSplitter(
   #    separator = "\n",
   #    chunk_size = 1000,
@@ -52,6 +52,8 @@ def Model():
   #  astra_vector_store.add_texts(texts)
    
   #  vector_store = FAISS.from_texts(texts, embedding=embedding)
+   
+  #  FAISS.save_local("vector") # saving the vector
    
    vector_store = FAISS.load_local("vector", embeddings=embedding)
 
@@ -80,6 +82,7 @@ def load_lottieurl(url):
 
 def main():
     
+    # page metadata
     st.set_page_config(page_title="Chat Bot", page_icon="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/400px-PDF_file_icon.svg.png", layout="wide")
     
     welcome = load_lottieurl("https://assets4.lottiefiles.com/private_files/lf30_1TcivY.json")   
