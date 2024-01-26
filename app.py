@@ -83,7 +83,7 @@ def load_lottieurl(url):
 def main():
     
     # page metadata
-    st.set_page_config(page_title="Chat Bot", page_icon="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/400px-PDF_file_icon.svg.png", layout="wide")
+    st.set_page_config(page_title="Chat-with-pdf", page_icon="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/400px-PDF_file_icon.svg.png", layout="centered")
     
     welcome = load_lottieurl("https://assets4.lottiefiles.com/private_files/lf30_1TcivY.json")   
     st_lottie(welcome, height=150, key="Welcome" )
