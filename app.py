@@ -26,7 +26,7 @@ embedding = OpenAIEmbeddings(openai_api_key = OPENAI_API_KEY)
 
 
 def Model():
-  # The below-mentioned code has already been executed once.
+  # The below-mentioned code has already been executed once and vector is saved in the vector folder.
 
   #   # reading PDF
   #   pdfreader = PdfReader('48lawsofpower.pdf')
