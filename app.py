@@ -42,14 +42,12 @@ def Model():
   # splitting the text using Character Text Split to minimize token size
   #  text_splitter = CharacterTextSplitter(
   #    separator = "\n",
-  #    chunk_size = 1000,
-  #    chunk_overlap = 200,
+  #    chunk_size = 1500,
+  #    chunk_overlap = 300,
   #    length_function = len,
   #  )  
    
   #  texts = text_splitter.split_text(raw_text)
-
-  #  astra_vector_store.add_texts(texts)
    
   #  vector_store = FAISS.from_texts(texts, embedding=embedding)
    
