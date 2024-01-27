@@ -1,8 +1,11 @@
 web app link : https://chat-with-pdf-dk.streamlit.app/
 
 For reading pdf, I have used PdfReader from the PyPDF2 library.
+
 I have used the OpenAI LLM Model and OpenAI Embeddings for converting text into vectors.
+
 Used FAISS for storing vectors.
+
 Used Vector Wrapper Index for wrapping up all the vectors in a single package.
 
 
